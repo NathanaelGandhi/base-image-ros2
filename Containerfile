@@ -1,4 +1,7 @@
-FROM ros:humble
+ARG ROS_DISTRO=humble
+FROM ros:${ROS_DISTRO}
+LABEL ROS_DISTRO=${ROS_DISTRO}
+LABEL NAME="base-image-ros2"
 
 ################################################################################
 # Adds non-root user
